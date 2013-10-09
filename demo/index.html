@@ -10,9 +10,8 @@
 
   <div class="container">
     {{birthday}}
-    <form role="form" action="formDateSubmit" method="post" accept-charset="utf-8">
+    <form role="form" name="formDateSubmit" method="post" accept-charset="utf-8">
       <label for="birthday1">Input Your Birthday</label>
-      <input ng-model="birthday">
       <input dateselector
         id="birthday1"
         type="text"
@@ -21,6 +20,7 @@
         min-date="1983-09-07"
         date-format="DD/MM/YYYY">
     </form>
+    <input type="button" ng-click="go()">
   </div>
 
 

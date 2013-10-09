@@ -37,7 +37,6 @@ angular.module('ngDateSelector', []).directive('dateselector', ['$compile', func
         }
 
         ngModel.$setViewValue(newDate.format(dateFormat));
-        ngModel.$modelValue = new Date(newDate.format('YYYY-MM-DD'));
       }
 
       for (; _years >= yearsEnd; _years--) {
