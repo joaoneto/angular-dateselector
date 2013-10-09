@@ -14,8 +14,7 @@ angular.module('ngDateSelector', []).directive('dateselector', ['$compile', func
       var maxDate = moment(attrs.maxDate),
           minDate = moment(attrs.minDate || moment(maxDate).subtract('years', '80')),
           yearsIni = maxDate.year(),
-          yearsEnd = minDate.year(),
-          dateFormat = attrs.dateFormat;
+          yearsEnd = minDate.year();
 
       var _years = parseInt(yearsIni);
 
@@ -36,7 +35,7 @@ angular.module('ngDateSelector', []).directive('dateselector', ['$compile', func
           scope.days.push(String('00' + _days).slice(-2));
         }
 
-        ngModel.$setViewValue(newDate.format(dateFormat));
+        ngModel.$setViewValue(new Date(newDate.format()));
       }
 
       for (; _years >= yearsEnd; _years--) {
