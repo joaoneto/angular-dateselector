@@ -1,4 +1,4 @@
-angular.module('ngDateSelector', []).directive('dateselector', ['$compile', function ($compile) {
+angular.module('ngDateSelector', []).directive('dateselector', function () {
   var template = '<div>' +
                    '<select ng-model="selectedDay" ng-options="days.indexOf(day) + 1 as day for day in days"><option ng-show="false"></option></select>' +
                    '<select ng-model="selectedMonth" ng-options="months.indexOf(month) + 1 as month for month in months"><option ng-show="false"></option></select>' +
@@ -57,4 +57,4 @@ angular.module('ngDateSelector', []).directive('dateselector', ['$compile', func
     },
     template: template
   };
-}]);
+});
